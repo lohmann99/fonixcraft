@@ -18,7 +18,7 @@ command /remove_user <text>:
 			if {users::*} contains arg-1:
 				remove arg-1 from {users::*}
 				send "Fjernede %arg-1% fra brugerlisten" to player
-				send "Resterende brugere på listen: %{users::*}%" to player
+				send "Resterende brugere pÃ¥ listen: %{users::*}%" to player
 			else:
 				send "Brugeren %arg-1% blev ikke fundet i brugerlisten"
 		else:
@@ -27,22 +27,36 @@ command /remove_user <text>:
 command /login <text> <text>:
 	#Logs a user in and allows him access to his owned plots
 	trigger:
+		
+		# Check om brugeren er logged_in
 		if {%player%.logged_in} is true:
 			send "Du er allerede logget ind som: %{%player%.logged_in_as}%"
 			stop
+		
+		# Check om brugeren er oprettet
 		if {users::*} contains arg-1:
+			
+			# Check om password er rigtigt
 			if arg-2 is {%arg-1%.password}:
+			
+				# Opdater login variabler
 				set {%player%.logged_in} to true
 				set {%player%.logged_in_as} to arg-1
-				# teleport to safehouse
-				# restore items and experience
-				# restore worldguard ownerships
 				
+				
+				# Teleport til brugerens saferoom
+				# Giv brugeren sine items og sin experience
+				
+				# Giv brugeren adgang til sine WorlGuard regioner
 				loop {%{%player%.logged_in_as}%.owned_regions::*}:
 					console command "rg addowner -w world %loop-value% %player%"
 				
-				# teleport to town
+				# Teleport brugeren til byen
+				
+				
+				
 				send "Du er nu logget ind som: %{%player%.logged_in_as}%"
+				
 			else:
 				send "Adgangskoden er forkert."
 		else:
@@ -50,17 +64,24 @@ command /login <text> <text>:
 
 command /logout:
 	trigger:
+	
+		# Check om brugeren er logged_in
 		if {%player%.logged_in} is true:
-			#teleport to saferoom
-			#save items and experience
-			#remove worldguard ownerships
+			
+			# Teleport brugeren til saferoom
+			# Gem brugerens items og experience
+			
+			# Fratag brugeren adgang til sine WorlGuard regioner
 			loop {%{%player%.logged_in_as}%.owned_regions::*}:
 				console command "rg remowner -w world %loop-value% %player%"
+			
+			# Opdater login variabler
 			set {%player%.logged_in} to false
 			set {%player%.logged_in_as} to ""
-			#teleport to lobby
-			#freeze player
+			
+			# Teleport brugeren til lobby og frys ham
 			send "Du er nu logget ud."
+		
 		else:
 			send "Du er ikke logget ind."
 
@@ -72,12 +93,12 @@ command /assign_region <text> <text>:
 		if {users::*} contains arg-1:
 			if {wg_regions::*} contains arg-2:
 				add arg-2 to {%arg-1%.owned_regions::*}
-				send "Regionen blev tilføjet til brugeren liste"
+				send "Regionen blev tilfÃ¸jet til brugeren liste"
 				send "Listen indeholder nu: %{%arg-1%.owned_regions::*}%"
 			else:
 				send "Regionen blev ikke fundet i regions listen"
 		else:
-			send "Brugeren blev ikke fundet i regionslisten."
+			send "Brugeren blev ikke fundet i bruger listen."
 
 command /define_wg_region <text>:
 	usage: "/define_wg_region <name>"
@@ -86,7 +107,7 @@ command /define_wg_region <text>:
 	trigger:
 		player command "rg define %arg-1%"
 		add arg-1 to {wg_regions::*}
-		send "Regionen er nu oprettet og tilføjet til listen"
+		send "Regionen er nu oprettet og tilfÃ¸jet til listen"
 		send "Listen indeholder nu: %{wg_regions::*}%"
 
 command /remove_wg_region <text>:
@@ -100,7 +121,7 @@ command /remove_wg_region <text>:
 			send "Regionen %arg-1% blev slette fra listen"
 			send "Listen indeholder nu: %{wg_regions::*}%"
 		else:
-			send "Regionen %arg-1% blev ikke funde på region listen"
+			send "Regionen %arg-1% blev ikke funde pÃ¥ region listen"
 
 
 
