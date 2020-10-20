@@ -1,0 +1,37 @@
+# Responsible for everything that has to do with user modification
+
+command /register <text> <text>:
+	# Register a username and a password to the server.
+	usage: "/register <username> <password>
+	permission: skript.user
+	permission message: "Du har ikke adgang til denne command"
+	trigger:
+		
+		add arg-1 to {users::*}
+		set {%arg-1%.password} to arg-2
+		send "Bruger %arg-1% oprettet med adgangskode: %arg-2%" to player
+		
+command /remove_user <text>:
+	# Remove a already registered user.
+	usage: "/remove_user <username>"
+	permission: skript.user
+	permission message: "Du har ikke adgang til denne command"
+	trigger:
+	
+		if {users::*} contains arg-1:
+			remove arg-1 from {users::*}
+			send "Fjernede %arg-1% fra brugerlisten" to player
+			send "Resterende brugere på listen: %{users::*}%" to player
+		else:
+			send "Brugeren %arg-1% blev ikke fundet i bruger listen"
+			
+
+command /user_set_saferoom <text>:
+	usage: "/user_set_saferoom <username>
+	permission: skript.user
+	permission message: "Du har ikke adgang til denne command"
+	trigger:
+		if {users::*} contains %arg-1%:
+			set %arg-1%.saferoom_location to player location
+		else:
+			message "Brugeren blev ikke fundet i bruger listen"

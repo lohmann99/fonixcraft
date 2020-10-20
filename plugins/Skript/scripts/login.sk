@@ -1,29 +1,6 @@
 #
 # A Login script that allows multiple accounts to share a progress and regions in worldguard.
 
-command /register <text> <text>:
-	# Register a username and a password to the server.
-	trigger:
-		player has permission "skript.register":
-			add arg-1 to {users::*}
-			set {%arg-1%.password} to arg-2
-			send "Bruger %arg-1% oprettet med adgangskode: %arg-2%" to player
-		else:
-			send "Du har ikke adgang til at bruge denne command."
-
-command /remove_user <text>:
-	# Remove a already registered user.
-	trigger:
-		if player has permission "skript.remove":
-			if {users::*} contains arg-1:
-				remove arg-1 from {users::*}
-				send "Fjernede %arg-1% fra brugerlisten" to player
-				send "Resterende brugere på listen: %{users::*}%" to player
-			else:
-				send "Brugeren %arg-1% blev ikke fundet i bruger listen"
-		else:
-			send "Du har ikke adgang til at bruge denne command."
-
 command /login <text> <text>:
 	#Logs a user in and allows him access to his owned plots
 	trigger:
@@ -96,43 +73,7 @@ command /logout:
 		else:
 			send "Du er ikke logget ind."
 
-command /assign_region <text> <text>:
-	usage: "/assign_region <player> <region>"
-	permission: skript.region
-	permission message: "Du har ikke adgang til denne command"
-	trigger:
-		if {users::*} contains arg-1:
-			if {wg_regions::*} contains arg-2:
-				add arg-2 to {%arg-1%.owned_regions::*}
-				send "Regionen blev tilføjet til brugeren liste"
-				send "Listen indeholder nu: %{%arg-1%.owned_regions::*}%"
-			else:
-				send "Regionen blev ikke fundet i regions listen"
-		else:
-			send "Brugeren blev ikke fundet i bruger listen."
 
-command /define_wg_region <text>:
-	usage: "/define_wg_region <name>"
-	permission: skript.wg
-	permission message: "Du har ikke adgang til denne command"
-	trigger:
-		player command "rg define %arg-1%"
-		add arg-1 to {wg_regions::*}
-		send "Regionen er nu oprettet og tilføjet til listen"
-		send "Listen indeholder nu: %{wg_regions::*}%"
-
-command /remove_wg_region <text>:
-	usage: "/remove_wg_region <name>"
-	permission: skript.wg
-	permission message: "Du har ikke adgang til denne command"
-	trigger:
-		if {wg_regions::*} contains arg-1:
-			console command "rg remove -w world %arg-1%"
-			remove arg-1 from {wg_regions::*}
-			send "Regionen %arg-1% blev slette fra listen"
-			send "Listen indeholder nu: %{wg_regions::*}%"
-		else:
-			send "Regionen %arg-1% blev ikke funde på region listen"
 
 
 
