@@ -20,7 +20,7 @@ command /remove_user <text>:
 				send "Fjernede %arg-1% fra brugerlisten" to player
 				send "Resterende brugere på listen: %{users::*}%" to player
 			else:
-				send "Brugeren %arg-1% blev ikke fundet i brugerlisten"
+				send "Brugeren %arg-1% blev ikke fundet i bruger listen"
 		else:
 			send "Du har ikke adgang til at bruge denne command."
 
@@ -45,6 +45,11 @@ command /login <text> <text>:
 				
 				
 				# Teleport til brugerens saferoom
+				if {%{%player%.logged_in_as}%.saferoom_location} is set:
+					teleport player to {%{%player%.logged_in_as}%.saferoom_location}
+				else:
+					message "Du har ikke angivet nogen Saferoom Location for {%player%.logged_in_as} gør venligst dette"
+				
 				# Giv brugeren sine items og sin experience
 				
 				# Giv brugeren adgang til sine WorlGuard regioner
@@ -52,6 +57,9 @@ command /login <text> <text>:
 					console command "rg addowner -w world %loop-value% %player%"
 				
 				# Teleport brugeren til byen
+				teleport player to {town_center}
+				
+				# Stop frys
 				
 				
 				
@@ -60,7 +68,7 @@ command /login <text> <text>:
 			else:
 				send "Adgangskoden er forkert."
 		else:
-			send "Brugeren %arg-1% blev ikke fundet i brugerlisten"
+			send "Brugeren %arg-1% blev ikke fundet i bruger listen"
 
 command /logout:
 	trigger:
@@ -69,6 +77,9 @@ command /logout:
 		if {%player%.logged_in} is true:
 			
 			# Teleport brugeren til saferoom
+			teleport player to {%{%player%.logged_in_as}%.saferoom_location}
+			
+			# Frys brugeren
 			# Gem brugerens items og experience
 			
 			# Fratag brugeren adgang til sine WorlGuard regioner
@@ -79,7 +90,7 @@ command /logout:
 			set {%player%.logged_in} to false
 			set {%player%.logged_in_as} to ""
 			
-			# Teleport brugeren til lobby og frys ham
+			# Teleport brugeren til lobby 
 			send "Du er nu logget ud."
 		
 		else:
