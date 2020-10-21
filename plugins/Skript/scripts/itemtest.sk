@@ -1,0 +1,19 @@
+# Item saving test
+
+command /item_test:
+	trigger: 
+		# Locate chest
+		loop all blocks in radius 2 around player:
+			if loop-block is chest:
+				set {_chest} to loop-block
+		
+		if {_chest} is set:
+			loop all items in player's inventory:
+				add loop-item to {_itemlist::*}
+				
+			loop {_itemlist::*}:
+				add loop-value to {_chest}
+		else:
+			message "Something went wrong, there is no chest"
+				
+		
