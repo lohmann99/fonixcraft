@@ -15,8 +15,7 @@ regions:
         max: {x: -136, y: 81, z: -58}
         members: {}
         flags: {}
-        owners:
-            unique-ids: [3d0cc251-2061-46f9-ae0d-437992b1f045]
+        owners: {}
         type: cuboid
         priority: 0
     have:
@@ -24,7 +23,6 @@ regions:
         max: {x: -132, y: 76, z: -58}
         members: {}
         flags: {}
-        owners:
-            unique-ids: [3d0cc251-2061-46f9-ae0d-437992b1f045]
+        owners: {}
         type: cuboid
         priority: 0

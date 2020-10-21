@@ -1,19 +1,23 @@
 # Item saving test
 
 command /item_test:
-	trigger: 
-		# Locate chest
+    trigger:
+        loop all blocks in radius 2 around player:
+            if loop-block is chest:
+                loop all items in player's inventory:
+                    if loop-block have enough space for 1 of stone:
+                        add loop-item to loop-block's inventory
+                        remove loop-item from player's inventory  
+        if player doesn't have enough space for 2277 of stone:
+            send "Chests near are full"
+            stop              
+        send "Added items to chests"
+				
+command /item_test2:
+	trigger:
 		loop all blocks in radius 2 around player:
 			if loop-block is chest:
-				set {_chest} to loop-block
-		
-		if {_chest} is set:
-			loop all items in player's inventory:
-				add loop-item to {_itemlist::*}
-				
-			loop {_itemlist::*}:
-				add loop-value to {_chest}
-		else:
-			message "Something went wrong, there is no chest"
-				
-		
+				loop all items in loop-block's inventory:
+					add loop-item to player's inventory
+					remove loop-item from loop-block's inventory
+		send "Retrived items from chest"

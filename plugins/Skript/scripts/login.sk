@@ -25,7 +25,7 @@ command /login <text> <text>:
 				if {%{%player%.logged_in_as}%.saferoom_location} is set:
 					teleport player to {%{%player%.logged_in_as}%.saferoom_location}
 				else:
-					message "Du har ikke angivet nogen Saferoom Location for {%player%.logged_in_as} gør venligst dette"
+					message "Du har ikke angivet nogen Saferoom Location for %{%player%.logged_in_as}% gør venligst dette"
 				
 				# Giv brugeren sine items og sin experience
 				

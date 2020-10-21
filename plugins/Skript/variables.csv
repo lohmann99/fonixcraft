@@ -3,12 +3,14 @@
 #
 # version: 2.5
 
+laura.password, string, 80066C6F6C313233
 lohmann99.logged_in, boolean, 01
-lohmann99.logged_in_as, string, 800573696D6F6E
+lohmann99.logged_in_as, string, 80056C61757261
 simon.owned_regions::1, string, 8003687573
 simon.owned_regions::2, string, 800468617665
 simon.password, string, 80066C6F6C313233
 users::1, string, 800573696D6F6E
+users::2, string, 80056C61757261
 wg_regions::1, string, 8003687573
 wg_regions::2, string, 800468617665
 
