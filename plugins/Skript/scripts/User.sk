@@ -1,6 +1,6 @@
 # Responsible for everything that has to do with user modification
 
-command /register <text> <text>:
+command /user_register <text> <text>:
 	# Register a username and a password to the server.
 	usage: "/register <username> <password>
 	permission: skript.user
@@ -11,7 +11,7 @@ command /register <text> <text>:
 		set {%arg-1%.password} to arg-2
 		send "Bruger %arg-1% oprettet med adgangskode: %arg-2%" to player
 		
-command /remove_user <text>:
+command /user_remove <text>:
 	# Remove a already registered user.
 	usage: "/remove_user <username>"
 	permission: skript.user
