@@ -27,14 +27,25 @@ command /login <text> <text>:
 				else:
 					message "Du har ikke angivet nogen Saferoom Location for %{%player%.logged_in_as}% gør venligst dette"
 				
-				# Giv brugeren sine items og sin experience
+				# Giv brugeren sine items
+				loop all blocks in radius 2 around player:
+					if loop-block is chest:
+						loop all items in loop-block's inventory:
+							add loop-item to player's inventory
+							remove loop-item from loop-block's inventory
+				send "Retrived items from chest"
+				
+				# Giv brugeren sine levels
 				
 				# Giv brugeren adgang til sine WorlGuard regioner
 				loop {%{%player%.logged_in_as}%.owned_regions::*}:
 					console command "rg addowner -w world %loop-value% %player%"
 				
 				# Teleport brugeren til byen
-				teleport player to {town_center}
+				if {town_center} is set:
+					teleport player to {town_center}
+				else:
+					message "Du har ikke angivet Town Center Location. Gør venligst dette."
 				
 				# Stop frys
 				
@@ -57,7 +68,15 @@ command /logout:
 			teleport player to {%{%player%.logged_in_as}%.saferoom_location}
 			
 			# Frys brugeren
-			# Gem brugerens items og experience
+			# Gem brugerens items
+			loop all blocks in radius 2 around player:
+				if loop-block is chest:
+					loop all items in player's inventory:
+						if loop-block have enough space for 1 of stone:
+							add loop-item to loop-block's inventory
+							remove loop-item from player's inventory
+							
+			# Gem brugerens experience
 			
 			# Fratag brugeren adgang til sine WorlGuard regioner
 			loop {%{%player%.logged_in_as}%.owned_regions::*}:

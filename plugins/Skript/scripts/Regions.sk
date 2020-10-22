@@ -1,7 +1,7 @@
 # Resposible for everything to do with worldguard regions
 
-command /assign_region <text> <text>:
-	usage: "/assign_region <player> <region>"
+command /region_assign <text> <text>:
+	usage: "/region_assign <player> <region>"
 	permission: skript.region
 	permission message: "Du har ikke adgang til denne command"
 	trigger:
@@ -15,8 +15,8 @@ command /assign_region <text> <text>:
 		else:
 			send "Brugeren blev ikke fundet i bruger listen."
 
-command /define_wg_region <text>:
-	usage: "/define_wg_region <name>"
+command /region_define <text>:
+	usage: "/region_define <name>"
 	permission: skript.region
 	permission message: "Du har ikke adgang til denne command"
 	trigger:
@@ -25,8 +25,8 @@ command /define_wg_region <text>:
 		send "Regionen er nu oprettet og tilføjet til listen"
 		send "Listen indeholder nu: %{wg_regions::*}%"
 
-command /remove_wg_region <text>:
-	usage: "/remove_wg_region <name>"
+command /region_remove <text>:
+	usage: "/region_remove <name>"
 	permission: skript.region
 	permission message: "Du har ikke adgang til denne command"
 	trigger:
