@@ -1,9 +1,13 @@
-[22:00:34] [main/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
-[22:00:35] [main/INFO]: Reloading ResourceManager: Default, bukkit
-[22:00:35] [Worker-Main-1/INFO]: Loaded 7 recipes
-[22:00:36] [Server thread/INFO]: Starting minecraft server version 1.16.3
-[22:00:36] [Server thread/INFO]: Loading properties
-[22:00:36] [Server console handler/WARN]: [org.jline] Failed to load history
+[22:17:30] [main/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[22:17:30] [main/WARN]: Missing data pack mod:forge
+[22:17:30] [main/WARN]: Missing data pack mod:worldeditcuife3
+[22:17:30] [main/WARN]: Missing data pack mod:worldedit
+[22:17:30] [main/INFO]: Found new data pack file/bukkit, loading it automatically
+[22:17:30] [main/INFO]: Reloading ResourceManager: Default, bukkit
+[22:17:31] [Worker-Main-2/INFO]: Loaded 7 recipes
+[22:17:32] [Server thread/INFO]: Starting minecraft server version 1.16.3
+[22:17:32] [Server thread/INFO]: Loading properties
+[22:17:32] [Server console handler/WARN]: [org.jline] Failed to load history
 java.lang.IllegalArgumentException: Bad history file syntax! The history file `.console_history` may be an older history: please remove it or use a different history file.
 	at org.jline.reader.impl.history.DefaultHistory.addHistoryLine(DefaultHistory.java:179) ~[patched_1.16.3.jar:git-Paper-206]
 	at org.jline.reader.impl.history.DefaultHistory.addHistoryLine(DefaultHistory.java:169) ~[patched_1.16.3.jar:git-Paper-206]
@@ -18,244 +22,334 @@ java.lang.IllegalArgumentException: Bad history file syntax! The history file `.
 	at net.minecrell.terminalconsole.SimpleTerminalConsole.readCommands(SimpleTerminalConsole.java:158) ~[patched_1.16.3.jar:git-Paper-206]
 	at net.minecrell.terminalconsole.SimpleTerminalConsole.start(SimpleTerminalConsole.java:141) ~[patched_1.16.3.jar:git-Paper-206]
 	at net.minecraft.server.v1_16_R2.DedicatedServer$1.run(DedicatedServer.java:64) ~[patched_1.16.3.jar:git-Paper-206]
-[22:00:36] [Server thread/INFO]: This server is running Paper version git-Paper-206 (MC: 1.16.3) (Implementing API version 1.16.3-R0.1-SNAPSHOT)
-[22:00:36] [Server thread/INFO]: Debug logging is disabled
-[22:00:36] [Server thread/INFO]: Using 4 threads for Netty based IO
-[22:00:36] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[22:00:36] [Server thread/INFO]: Default game type: SURVIVAL
-[22:00:36] [Server thread/INFO]: Generating keypair
-[22:00:36] [Server thread/INFO]: Starting Minecraft server on *:25565
-[22:00:36] [Server thread/INFO]: Using default channel type
-[22:00:38] [Server thread/INFO]: [WorldEdit] Loading WorldEdit v7.2.0-beta-05+e575ffe
-[22:00:38] [Server thread/INFO]: Got request to register class com.sk89q.worldedit.bukkit.BukkitServerInterface with WorldEdit [com.sk89q.worldedit.extension.platform.PlatformManager@4cbefa6a]
-[22:00:38] [Server thread/INFO]: [WorldGuard] Loading WorldGuard v7.0.4+f7ff984
-[22:00:38] [Server thread/INFO]: [Skript] Loading Skript v2.5
-[22:00:38] [Server thread/INFO]: [Skellett] Loading Skellett v1.9.9
-[22:00:38] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[22:00:38] [Server thread/INFO]: [WorldEdit] Enabling WorldEdit v7.2.0-beta-05+e575ffe
-[22:00:38] [Server thread/INFO]: WEPIF: Using the Bukkit Permissions API.
-[22:00:38] [Server thread/INFO]: Using com.sk89q.worldedit.bukkit.adapter.impl.Spigot_v1_16_R2 as the Bukkit adapter
-[22:00:39] [Server thread/INFO]: Preparing level "world"
-[22:00:39] [Server thread/INFO]: -------- World Settings For [world] --------
-[22:00:39] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
-[22:00:39] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
-[22:00:39] [Server thread/INFO]: Item Merge Radius: 2.5
-[22:00:39] [Server thread/INFO]: Item Despawn Rate: 6000
-[22:00:39] [Server thread/INFO]: View Distance: 10
-[22:00:39] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
-[22:00:39] [Server thread/INFO]: Arrow Despawn Rate: 1200 Trident Respawn Rate:1200
-[22:00:39] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
-[22:00:39] [Server thread/INFO]: Mob Spawn Range: 8
-[22:00:39] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313 Ocean: 14357621 Shipwreck: 165745295 End City: 10387313 Slime: 987234911 Bastion: 30084232 Fortress: 30084232 Mansion: 10387319 Fossil: 14357921 Portal: 34222645
-[22:00:39] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
-[22:00:39] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
-[22:00:39] [Server thread/INFO]: Experience Merge Radius: 3.0
-[22:00:39] [Server thread/INFO]: Cactus Growth Modifier: 100%
-[22:00:39] [Server thread/INFO]: Cane Growth Modifier: 100%
-[22:00:39] [Server thread/INFO]: Melon Growth Modifier: 100%
-[22:00:39] [Server thread/INFO]: Mushroom Growth Modifier: 100%
-[22:00:39] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
-[22:00:39] [Server thread/INFO]: Sapling Growth Modifier: 100%
-[22:00:39] [Server thread/INFO]: Beetroot Growth Modifier: 100%
-[22:00:39] [Server thread/INFO]: Carrot Growth Modifier: 100%
-[22:00:39] [Server thread/INFO]: Potato Growth Modifier: 100%
-[22:00:39] [Server thread/INFO]: Wheat Growth Modifier: 100%
-[22:00:39] [Server thread/INFO]: NetherWart Growth Modifier: 100%
-[22:00:39] [Server thread/INFO]: Vine Growth Modifier: 100%
-[22:00:39] [Server thread/INFO]: Cocoa Growth Modifier: 100%
-[22:00:39] [Server thread/INFO]: Bamboo Growth Modifier: 100%
-[22:00:39] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
-[22:00:39] [Server thread/INFO]: Kelp Growth Modifier: 100%
-[22:00:39] [Server thread/INFO]: Max TNT Explosions: 100
-[22:00:39] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
-[22:00:40] [Server thread/INFO]: Registering commands with com.sk89q.worldedit.bukkit.BukkitServerInterface
-[22:00:40] [Server thread/INFO]: -------- World Settings For [world_nether] --------
-[22:00:40] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
-[22:00:40] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
-[22:00:40] [Server thread/INFO]: Item Merge Radius: 2.5
-[22:00:40] [Server thread/INFO]: Item Despawn Rate: 6000
-[22:00:40] [Server thread/INFO]: View Distance: 10
-[22:00:40] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
-[22:00:40] [Server thread/INFO]: Arrow Despawn Rate: 1200 Trident Respawn Rate:1200
-[22:00:40] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
-[22:00:40] [Server thread/INFO]: Mob Spawn Range: 8
-[22:00:40] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313 Ocean: 14357621 Shipwreck: 165745295 End City: 10387313 Slime: 987234911 Bastion: 30084232 Fortress: 30084232 Mansion: 10387319 Fossil: 14357921 Portal: 34222645
-[22:00:40] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
-[22:00:40] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
-[22:00:40] [Server thread/INFO]: Experience Merge Radius: 3.0
-[22:00:40] [Server thread/INFO]: Cactus Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Cane Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Melon Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Mushroom Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Sapling Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Beetroot Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Carrot Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Potato Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Wheat Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: NetherWart Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Vine Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Cocoa Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Bamboo Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Kelp Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Max TNT Explosions: 100
-[22:00:40] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
-[22:00:40] [Server thread/INFO]: -------- World Settings For [world_the_end] --------
-[22:00:40] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
-[22:00:40] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
-[22:00:40] [Server thread/INFO]: Item Merge Radius: 2.5
-[22:00:40] [Server thread/INFO]: Item Despawn Rate: 6000
-[22:00:40] [Server thread/INFO]: View Distance: 10
-[22:00:40] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
-[22:00:40] [Server thread/INFO]: Arrow Despawn Rate: 1200 Trident Respawn Rate:1200
-[22:00:40] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
-[22:00:40] [Server thread/INFO]: Mob Spawn Range: 8
-[22:00:40] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313 Ocean: 14357621 Shipwreck: 165745295 End City: 10387313 Slime: 987234911 Bastion: 30084232 Fortress: 30084232 Mansion: 10387319 Fossil: 14357921 Portal: 34222645
-[22:00:40] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
-[22:00:40] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
-[22:00:40] [Server thread/INFO]: Experience Merge Radius: 3.0
-[22:00:40] [Server thread/INFO]: Cactus Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Cane Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Melon Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Mushroom Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Sapling Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Beetroot Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Carrot Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Potato Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Wheat Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: NetherWart Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Vine Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Cocoa Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Bamboo Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Kelp Growth Modifier: 100%
-[22:00:40] [Server thread/INFO]: Max TNT Explosions: 100
-[22:00:40] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
-[22:00:40] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[22:00:40] [Server thread/INFO]: Loaded 0 spawn chunks for world world
-[22:00:40] [Server thread/INFO]: Time elapsed: 475 ms
-[22:00:40] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
-[22:00:41] [Server thread/INFO]: Loaded 0 spawn chunks for world world_nether
-[22:00:41] [Server thread/INFO]: Time elapsed: 41 ms
-[22:00:41] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
-[22:00:41] [Server thread/INFO]: Loaded 0 spawn chunks for world world_the_end
-[22:00:41] [Server thread/INFO]: Time elapsed: 150 ms
-[22:00:41] [Server thread/INFO]: [WorldGuard] Enabling WorldGuard v7.0.4+f7ff984
-[22:00:41] [Server thread/INFO]: [WorldGuard] (world) TNT ignition is PERMITTED.
-[22:00:41] [Server thread/INFO]: [WorldGuard] (world) Lighters are PERMITTED.
-[22:00:41] [Server thread/INFO]: [WorldGuard] (world) Lava fire is PERMITTED.
-[22:00:41] [Server thread/INFO]: [WorldGuard] (world) Fire spread is UNRESTRICTED.
-[22:00:41] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world'
-[22:00:41] [Server thread/INFO]: [WorldGuard] (world_nether) TNT ignition is PERMITTED.
-[22:00:41] [Server thread/INFO]: [WorldGuard] (world_nether) Lighters are PERMITTED.
-[22:00:41] [Server thread/INFO]: [WorldGuard] (world_nether) Lava fire is PERMITTED.
-[22:00:41] [Server thread/INFO]: [WorldGuard] (world_nether) Fire spread is UNRESTRICTED.
-[22:00:41] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world_nether'
-[22:00:41] [Server thread/INFO]: [WorldGuard] (world_the_end) TNT ignition is PERMITTED.
-[22:00:41] [Server thread/INFO]: [WorldGuard] (world_the_end) Lighters are PERMITTED.
-[22:00:41] [Server thread/INFO]: [WorldGuard] (world_the_end) Lava fire is PERMITTED.
-[22:00:41] [Server thread/INFO]: [WorldGuard] (world_the_end) Fire spread is UNRESTRICTED.
-[22:00:41] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world_the_end'
-[22:00:41] [Server thread/INFO]: [WorldGuard] Loading region data...
-[22:00:41] [Server thread/INFO]: [Skript] Enabling Skript v2.5
-[22:00:43] [ForkJoinPool.commonPool-worker-1/INFO]: [Skript] You're currently running the latest stable version of Skript.
-[22:00:47] [Server thread/INFO]: [Skript] Loaded 128188 aliases in 5274ms
-[22:00:47] [Server thread/INFO]: [Skript]  ~ created by & © Peter Güttinger aka Njol ~
-[22:00:47] [Server thread/INFO]: [Skellett] Enabling Skellett v1.9.9
-[22:00:49] [Server thread/INFO]: [Skellett] Registered 47 Effects, 16 Conditions, 134 Expressions and 25 Events
-[22:00:49] [Server thread/INFO]: [Skellett] Has been enabled!
-[22:00:49] [Server thread/INFO]: Running delayed init tasks
-[22:00:49] [Server thread/INFO]: [Skript] Loading variables...
-[22:00:49] [Server thread/INFO]: [Skript] Loaded 8 variables in 0.0 seconds
-[22:00:49] [Server thread/WARN]: [Skript] Possible name conflict of variables {arg-1.saferoom_location} and {%{%player%.logged_in_as}%.saferoom_location} (there might be more conflicts). (User.sk, line 35: set {arg-1.saferoom_location} to player's location')
-[22:00:49] [Server thread/INFO]: [Skript] All scripts loaded without errors.
-[22:00:49] [Server thread/INFO]: [Skript] Loaded 4 scripts with a total of 0 triggers and 9 commands in 0.27 seconds
-[22:00:49] [Server thread/INFO]: [Skript] Finished loading.
-[22:00:49] [Server thread/INFO]: Done (12.947s)! For help, type "help"
-[22:00:49] [Server thread/INFO]: Timings Reset
-[22:02:38] [User Authenticator #1/INFO]: UUID of player lohmann99 is 3d0cc251-2061-46f9-ae0d-437992b1f045
-[22:02:39] [Server thread/INFO]: lohmann99 joined the game
-[22:02:39] [Server thread/INFO]: lohmann99[/127.0.0.1:50959] logged in with entity id 308 at ([world]-138.07542195095755, 76.0, -54.4432502523336)
-[22:03:21] [Server thread/INFO]: lohmann99 has made the advancement [Cover Me With Diamonds]
-[22:05:07] [Server thread/INFO]: lohmann99 issued server command: /item_test
-[22:05:07] [Server thread/INFO]: lohmann99 [3d0cc251-2061-46f9-ae0d-437992b1f045]: /item_test
-[22:05:49] [Server thread/INFO]: lohmann99 issued server command: /item_test
-[22:05:49] [Server thread/INFO]: lohmann99 [3d0cc251-2061-46f9-ae0d-437992b1f045]: /item_test
-[22:05:53] [Server thread/INFO]: lohmann99 issued server command: /item_test
-[22:05:53] [Server thread/INFO]: lohmann99 [3d0cc251-2061-46f9-ae0d-437992b1f045]: /item_test
-[22:06:25] [Server thread/INFO]: lohmann99 issued server command: /item_test
-[22:06:25] [Server thread/INFO]: lohmann99 [3d0cc251-2061-46f9-ae0d-437992b1f045]: /item_test
-[22:06:46] [Server thread/INFO]: lohmann99 issued server command: /item_test
-[22:06:46] [Server thread/INFO]: lohmann99 [3d0cc251-2061-46f9-ae0d-437992b1f045]: /item_test
-[22:06:56] [Server thread/INFO]: lohmann99 issued server command: /item_test
-[22:06:56] [Server thread/INFO]: lohmann99 [3d0cc251-2061-46f9-ae0d-437992b1f045]: /item_test
-[22:07:11] [Server thread/INFO]: lohmann99 issued server command: /item_test
-[22:07:11] [Server thread/INFO]: lohmann99 [3d0cc251-2061-46f9-ae0d-437992b1f045]: /item_test
-[22:08:28] [Server thread/INFO]: lohmann99 lost connection: Disconnected
-[22:08:28] [Server thread/INFO]: lohmann99 left the game
-[22:16:05] [User Authenticator #2/INFO]: UUID of player lohmann99 is 3d0cc251-2061-46f9-ae0d-437992b1f045
-[22:16:05] [Server thread/INFO]: lohmann99 joined the game
-[22:16:05] [Server thread/INFO]: lohmann99[/127.0.0.1:51226] logged in with entity id 642 at ([world]-134.52997350815258, 77.0, -42.002839887496805)
-[22:16:35] [Server thread/INFO]: lohmann99 issued server command: /skript reload itemtest.sk
-[22:16:44] [Server thread/INFO]: lohmann99 issued server command: /item_test
-[22:16:44] [Server thread/INFO]: lohmann99 [3d0cc251-2061-46f9-ae0d-437992b1f045]: /item_test
-[22:17:02] [Server thread/INFO]: lohmann99 issued server command: /item_test
-[22:17:02] [Server thread/INFO]: lohmann99 [3d0cc251-2061-46f9-ae0d-437992b1f045]: /item_test
-[22:31:19] [Server thread/INFO]: lohmann99 issued server command: /skript reload itemtest.sk
-[22:31:31] [Server thread/INFO]: lohmann99 issued server command: /item_test
-[22:31:31] [Server thread/INFO]: lohmann99 [3d0cc251-2061-46f9-ae0d-437992b1f045]: /item_test
-[22:31:37] [Server thread/INFO]: lohmann99 issued server command: /item_test2
-[22:31:37] [Server thread/INFO]: lohmann99 [3d0cc251-2061-46f9-ae0d-437992b1f045]: /item_test2
-[22:31:50] [Server thread/INFO]: lohmann99 issued server command: /item_test2
-[22:31:50] [Server thread/INFO]: lohmann99 [3d0cc251-2061-46f9-ae0d-437992b1f045]: /item_test2
-[22:32:00] [Server thread/INFO]: lohmann99 issued server command: /item_test
-[22:32:00] [Server thread/INFO]: lohmann99 [3d0cc251-2061-46f9-ae0d-437992b1f045]: /item_test
-[22:34:41] [Server thread/INFO]: lohmann99 issued server command: /item_test2
-[22:34:41] [Server thread/INFO]: lohmann99 [3d0cc251-2061-46f9-ae0d-437992b1f045]: /item_test2
-[22:34:49] [Server thread/INFO]: lohmann99 issued server command: /item_test
-[22:34:49] [Server thread/INFO]: lohmann99 [3d0cc251-2061-46f9-ae0d-437992b1f045]: /item_test
-[22:36:16] [Server thread/INFO]: lohmann99 issued server command: /register laura lol123
-[22:36:16] [Server thread/INFO]: lohmann99 [3d0cc251-2061-46f9-ae0d-437992b1f045]: /register laura lol123
-[22:36:28] [Server thread/INFO]: lohmann99 issued server command: /login laura lol123
-[22:36:28] [Server thread/INFO]: lohmann99 [3d0cc251-2061-46f9-ae0d-437992b1f045]: /login laura lol123
-[22:37:29] [Server thread/INFO]: lohmann99 lost connection: Disconnected
-[22:37:29] [Server thread/INFO]: lohmann99 left the game
-[22:37:36] [User Authenticator #3/INFO]: UUID of player lohmann99 is 3d0cc251-2061-46f9-ae0d-437992b1f045
-[22:37:36] [Server thread/INFO]: lohmann99 joined the game
-[22:37:36] [Server thread/INFO]: lohmann99[/127.0.0.1:51289] logged in with entity id 1430 at ([world]-137.29013947282832, 76.0, -60.60091800764268)
-[22:37:46] [Server thread/INFO]: lohmann99 issued server command: /deop
-[22:37:51] [Server thread/INFO]: lohmann99 issued server command: /deop lohmann99
-[22:37:51] [Server thread/INFO]: [lohmann99: Made lohmann99 no longer a server operator]
-[22:38:28] [Server thread/INFO]: lohmann99 issued server command: /logout
-[22:38:28] [Server thread/INFO]: lohmann99 [3d0cc251-2061-46f9-ae0d-437992b1f045]: /logout
-[22:38:29] [WorldGuard Task Executor - 2/INFO]: Region 'hus' updated with owners removed.
-[22:38:29] [WorldGuard Task Executor - 2/INFO]: Region 'have' updated with owners removed.
-[22:38:39] [Server thread/INFO]: lohmann99 issued server command: /login laura lol123
-[22:38:39] [Server thread/INFO]: lohmann99 [3d0cc251-2061-46f9-ae0d-437992b1f045]: /login laura lol123
-[22:38:41] [WorldGuard Region I/O/INFO]: [WorldGuard] Region data changes made in 'world' have been background saved
-[22:39:57] [Server thread/INFO]: lohmann99 lost connection: Disconnected
-[22:39:57] [Server thread/INFO]: lohmann99 left the game
-[22:52:09] [Server thread/INFO]: Stopping the server
-[22:52:09] [Server thread/INFO]: Stopping server
-[22:52:09] [Server thread/INFO]: [Skellett] Disabling Skellett v1.9.9
-[22:52:09] [Server thread/INFO]: [Skript] Disabling Skript v2.5
-[22:52:09] [Server thread/INFO]: [WorldGuard] Disabling WorldGuard v7.0.4+f7ff984
-[22:52:09] [Server thread/INFO]: [WorldGuard] Shutting down executor and cancelling any pending tasks...
-[22:52:09] [Server thread/INFO]: [WorldEdit] Disabling WorldEdit v7.2.0-beta-05+e575ffe
-[22:52:09] [Server thread/INFO]: Unregistering com.sk89q.worldedit.bukkit.BukkitServerInterface from WorldEdit
-[22:52:09] [Server thread/INFO]: Saving players
-[22:52:09] [Server thread/INFO]: Saving worlds
-[22:52:09] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
-[22:52:09] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[22:52:09] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
-[22:52:09] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[22:52:09] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
-[22:52:09] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[22:52:09] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[22:52:09] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[22:52:09] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[22:52:10] [Server thread/INFO]: Flushing Chunk IO
-[22:52:10] [Server thread/INFO]: Closing Thread Pool
-[22:52:10] [Server thread/INFO]: Closing Server
+[22:17:32] [Server thread/INFO]: This server is running Paper version git-Paper-206 (MC: 1.16.3) (Implementing API version 1.16.3-R0.1-SNAPSHOT)
+[22:17:32] [Server thread/INFO]: Debug logging is disabled
+[22:17:32] [Server thread/INFO]: Using 4 threads for Netty based IO
+[22:17:32] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[22:17:32] [Server thread/INFO]: Default game type: SURVIVAL
+[22:17:32] [Server thread/INFO]: Generating keypair
+[22:17:32] [Server thread/INFO]: Starting Minecraft server on *:25565
+[22:17:32] [Server thread/INFO]: Using default channel type
+[22:17:33] [Server thread/INFO]: [WorldEdit] Loading WorldEdit v7.2.0-beta-05+e575ffe
+[22:17:34] [Server thread/INFO]: Got request to register class com.sk89q.worldedit.bukkit.BukkitServerInterface with WorldEdit [com.sk89q.worldedit.extension.platform.PlatformManager@586aa221]
+[22:17:34] [Server thread/INFO]: [WorldGuard] Loading WorldGuard v7.0.4+f7ff984
+[22:17:34] [Server thread/INFO]: [Skript] Loading Skript v2.5
+[22:17:34] [Server thread/INFO]: [Skellett] Loading Skellett v1.9.9
+[22:17:34] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[22:17:34] [Server thread/INFO]: [WorldEdit] Enabling WorldEdit v7.2.0-beta-05+e575ffe
+[22:17:34] [Server thread/INFO]: WEPIF: Using the Bukkit Permissions API.
+[22:17:34] [Server thread/INFO]: Using com.sk89q.worldedit.bukkit.adapter.impl.Spigot_v1_16_R2 as the Bukkit adapter
+[22:17:35] [Server thread/INFO]: Preparing level "Fonixcraft"
+[22:17:35] [Server thread/INFO]: -------- World Settings For [Fonixcraft] --------
+[22:17:35] [Server thread/INFO]: Experience Merge Radius: 3.0
+[22:17:35] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[22:17:35] [Server thread/INFO]: Cane Growth Modifier: 100%
+[22:17:35] [Server thread/INFO]: Melon Growth Modifier: 100%
+[22:17:35] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[22:17:35] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[22:17:35] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[22:17:35] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[22:17:35] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[22:17:35] [Server thread/INFO]: Potato Growth Modifier: 100%
+[22:17:35] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[22:17:35] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[22:17:35] [Server thread/INFO]: Vine Growth Modifier: 100%
+[22:17:35] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[22:17:35] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[22:17:35] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[22:17:35] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[22:17:35] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[22:17:35] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[22:17:35] [Server thread/INFO]: View Distance: 10
+[22:17:35] [Server thread/INFO]: Item Merge Radius: 2.5
+[22:17:35] [Server thread/INFO]: Item Despawn Rate: 6000
+[22:17:35] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[22:17:35] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[22:17:35] [Server thread/INFO]: Mob Spawn Range: 8
+[22:17:35] [Server thread/INFO]: Arrow Despawn Rate: 1200 Trident Respawn Rate:1200
+[22:17:35] [Server thread/INFO]: Max TNT Explosions: 100
+[22:17:35] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[22:17:35] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[22:17:35] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[22:17:35] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313 Ocean: 14357621 Shipwreck: 165745295 End City: 10387313 Slime: 987234911 Bastion: 30084232 Fortress: 30084232 Mansion: 10387319 Fossil: 14357921 Portal: 34222645
+[22:17:35] [Server thread/INFO]: Registering commands with com.sk89q.worldedit.bukkit.BukkitServerInterface
+[22:17:35] [Server thread/INFO]: ---- Migration of old nether folder required ----
+[22:17:35] [Server thread/INFO]: Unfortunately due to the way that Minecraft implemented multiworld support in 1.6, Bukkit requires that you move your nether folder to a new location in order to operate correctly.
+[22:17:35] [Server thread/INFO]: We will move this folder for you, but it will mean that you need to move it back should you wish to stop using Bukkit in the future.
+[22:17:35] [Server thread/INFO]: Attempting to move Fonixcraft\DIM-1 to Fonixcraft_nether\DIM-1...
+[22:17:35] [Server thread/INFO]: Success! To restore nether in the future, simply move Fonixcraft_nether\DIM-1 to Fonixcraft\DIM-1
+[22:17:35] [Server thread/INFO]: ---- Migration of old nether folder complete ----
+[22:17:36] [Server thread/INFO]: -------- World Settings For [Fonixcraft_nether] --------
+[22:17:36] [Server thread/INFO]: Experience Merge Radius: 3.0
+[22:17:36] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Cane Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Melon Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Potato Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Vine Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[22:17:36] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[22:17:36] [Server thread/INFO]: View Distance: 10
+[22:17:36] [Server thread/INFO]: Item Merge Radius: 2.5
+[22:17:36] [Server thread/INFO]: Item Despawn Rate: 6000
+[22:17:36] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[22:17:36] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[22:17:36] [Server thread/INFO]: Mob Spawn Range: 8
+[22:17:36] [Server thread/INFO]: Arrow Despawn Rate: 1200 Trident Respawn Rate:1200
+[22:17:36] [Server thread/INFO]: Max TNT Explosions: 100
+[22:17:36] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[22:17:36] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[22:17:36] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[22:17:36] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313 Ocean: 14357621 Shipwreck: 165745295 End City: 10387313 Slime: 987234911 Bastion: 30084232 Fortress: 30084232 Mansion: 10387319 Fossil: 14357921 Portal: 34222645
+[22:17:36] [Server thread/INFO]: ---- Migration of old the_end folder required ----
+[22:17:36] [Server thread/INFO]: Unfortunately due to the way that Minecraft implemented multiworld support in 1.6, Bukkit requires that you move your the_end folder to a new location in order to operate correctly.
+[22:17:36] [Server thread/INFO]: We will move this folder for you, but it will mean that you need to move it back should you wish to stop using Bukkit in the future.
+[22:17:36] [Server thread/INFO]: Attempting to move Fonixcraft\DIM1 to Fonixcraft_the_end\DIM1...
+[22:17:36] [Server thread/INFO]: Success! To restore the_end in the future, simply move Fonixcraft_the_end\DIM1 to Fonixcraft\DIM1
+[22:17:36] [Server thread/INFO]: ---- Migration of old the_end folder complete ----
+[22:17:36] [Server thread/INFO]: -------- World Settings For [Fonixcraft_the_end] --------
+[22:17:36] [Server thread/INFO]: Experience Merge Radius: 3.0
+[22:17:36] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Cane Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Melon Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Potato Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Vine Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[22:17:36] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[22:17:36] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[22:17:36] [Server thread/INFO]: View Distance: 10
+[22:17:36] [Server thread/INFO]: Item Merge Radius: 2.5
+[22:17:36] [Server thread/INFO]: Item Despawn Rate: 6000
+[22:17:36] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[22:17:36] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[22:17:36] [Server thread/INFO]: Mob Spawn Range: 8
+[22:17:36] [Server thread/INFO]: Arrow Despawn Rate: 1200 Trident Respawn Rate:1200
+[22:17:36] [Server thread/INFO]: Max TNT Explosions: 100
+[22:17:36] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[22:17:36] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[22:17:36] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[22:17:36] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313 Ocean: 14357621 Shipwreck: 165745295 End City: 10387313 Slime: 987234911 Bastion: 30084232 Fortress: 30084232 Mansion: 10387319 Fossil: 14357921 Portal: 34222645
+[22:17:36] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[22:17:36] [Server thread/INFO]: Loaded 0 spawn chunks for world Fonixcraft
+[22:17:36] [Server thread/INFO]: Time elapsed: 413 ms
+[22:17:36] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[22:17:36] [Server thread/INFO]: Loaded 0 spawn chunks for world Fonixcraft_nether
+[22:17:36] [Server thread/INFO]: Time elapsed: 180 ms
+[22:17:36] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[22:17:37] [Server thread/INFO]: Loaded 0 spawn chunks for world Fonixcraft_the_end
+[22:17:37] [Server thread/INFO]: Time elapsed: 262 ms
+[22:17:37] [Server thread/INFO]: [WorldGuard] Enabling WorldGuard v7.0.4+f7ff984
+[22:17:37] [Server thread/INFO]: [WorldGuard] Default configuration file written: config_world.yml
+[22:17:37] [Server thread/INFO]: [WorldGuard] Default configuration file written: blacklist.txt
+[22:17:37] [Server thread/INFO]: [WorldGuard] (Fonixcraft) TNT ignition is PERMITTED.
+[22:17:37] [Server thread/INFO]: [WorldGuard] (Fonixcraft) Lighters are PERMITTED.
+[22:17:37] [Server thread/INFO]: [WorldGuard] (Fonixcraft) Lava fire is PERMITTED.
+[22:17:37] [Server thread/INFO]: [WorldGuard] (Fonixcraft) Fire spread is UNRESTRICTED.
+[22:17:37] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'Fonixcraft'
+[22:17:37] [Server thread/INFO]: [WorldGuard] Default configuration file written: config_world.yml
+[22:17:37] [Server thread/INFO]: [WorldGuard] Default configuration file written: blacklist.txt
+[22:17:37] [Server thread/INFO]: [WorldGuard] (Fonixcraft_nether) TNT ignition is PERMITTED.
+[22:17:37] [Server thread/INFO]: [WorldGuard] (Fonixcraft_nether) Lighters are PERMITTED.
+[22:17:37] [Server thread/INFO]: [WorldGuard] (Fonixcraft_nether) Lava fire is PERMITTED.
+[22:17:37] [Server thread/INFO]: [WorldGuard] (Fonixcraft_nether) Fire spread is UNRESTRICTED.
+[22:17:37] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'Fonixcraft_nether'
+[22:17:37] [Server thread/INFO]: [WorldGuard] Default configuration file written: config_world.yml
+[22:17:37] [Server thread/INFO]: [WorldGuard] Default configuration file written: blacklist.txt
+[22:17:37] [Server thread/INFO]: [WorldGuard] (Fonixcraft_the_end) TNT ignition is PERMITTED.
+[22:17:37] [Server thread/INFO]: [WorldGuard] (Fonixcraft_the_end) Lighters are PERMITTED.
+[22:17:37] [Server thread/INFO]: [WorldGuard] (Fonixcraft_the_end) Lava fire is PERMITTED.
+[22:17:37] [Server thread/INFO]: [WorldGuard] (Fonixcraft_the_end) Fire spread is UNRESTRICTED.
+[22:17:37] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'Fonixcraft_the_end'
+[22:17:37] [Server thread/INFO]: [WorldGuard] Loading region data...
+[22:17:37] [Server thread/INFO]: [Skript] Enabling Skript v2.5
+[22:17:40] [ForkJoinPool.commonPool-worker-1/INFO]: [Skript] You're currently running the latest stable version of Skript.
+[22:17:42] [Server thread/INFO]: [Skript] Loaded 128188 aliases in 5070ms
+[22:17:43] [Server thread/INFO]: [Skript]  ~ created by & © Peter Güttinger aka Njol ~
+[22:17:43] [Server thread/INFO]: [Skellett] Enabling Skellett v1.9.9
+[22:17:44] [Server thread/INFO]: [Skellett] Registered 47 Effects, 16 Conditions, 134 Expressions and 25 Events
+[22:17:44] [Server thread/INFO]: [Skellett] Has been enabled!
+[22:17:44] [Server thread/INFO]: Running delayed init tasks
+[22:17:44] [Server thread/INFO]: [Skript] Loading variables...
+[22:17:44] [Server thread/INFO]: [Skript] Loaded 10 variables in 0.0 seconds
+[22:17:45] [Server thread/WARN]: [Skript] Possible name conflict of variables {arg-1.saferoom_location} and {%{%player%.logged_in_as}%.saferoom_location} (there might be more conflicts). (User.sk, line 35: set {arg-1.saferoom_location} to player's location')
+[22:17:45] [Server thread/INFO]: [Skript] All scripts loaded without errors.
+[22:17:45] [Server thread/INFO]: [Skript] Loaded 4 scripts with a total of 0 triggers and 10 commands in 0.9 seconds
+[22:17:45] [Server thread/INFO]: [Skript] Finished loading.
+[22:17:45] [Server thread/INFO]: Done (13.217s)! For help, type "help"
+[22:17:45] [Server thread/INFO]: Timings Reset
+[22:17:45] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:17:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:17:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:17:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:swim_speed'
+[22:17:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:17:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:17:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:17:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:17:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:17:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:17:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:17:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:17:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:17:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:17:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:17:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:17:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:17:47] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:17:48] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:17:48] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:03] [User Authenticator #1/INFO]: UUID of player lohmann99 is 3d0cc251-2061-46f9-ae0d-437992b1f045
+[22:20:03] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:03] [Server thread/WARN]: Ignoring unknown attribute 'forge:reach_distance'
+[22:20:04] [Server thread/INFO]: lohmann99 joined the game
+[22:20:04] [Server thread/INFO]: lohmann99[/127.0.0.1:63505] logged in with entity id 114 at ([Fonixcraft]256.5, 63.5, 188.5)
+[22:20:05] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:09] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:09] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:09] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:09] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:09] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:09] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:09] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:09] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:09] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:swim_speed'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:24] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:27] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:20:27] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:13] [Server thread/INFO]: Made lohmann99 a server operator
+[22:21:20] [Server thread/INFO]: lohmann99 issued server command: /jumpto
+[22:21:20] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:20] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:20] [Server thread/WARN]: Ignoring unknown attribute 'forge:swim_speed'
+[22:21:20] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:21] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:21] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:21] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:21] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:21] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:21] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:21] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:21] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:21] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:21] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:21] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:21] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:21] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:21] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:21] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:21] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:21] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:21] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:21] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:23] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:25] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:25] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:25] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:25] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:26] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:26] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:26] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:26] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:26] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:26] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:26] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:26] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:26] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:26] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:31] [Server thread/INFO]: lohmann99 issued server command: /gamemode spectator
+[22:21:31] [Server thread/INFO]: [lohmann99: Set own game mode to Spectator Mode]
+[22:21:36] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:46] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:47] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:48] [Server thread/WARN]: Ignoring unknown attribute 'forge:swim_speed'
+[22:21:48] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:52] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:52] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:58] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:21:59] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:22:06] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:22:07] [Server thread/WARN]: Ignoring unknown attribute 'forge:swim_speed'
+[22:22:07] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:22:07] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:22:10] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:22:10] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:23:07] [Server thread/WARN]: Ignoring unknown attribute 'forge:entity_gravity'
+[22:24:24] [Server thread/INFO]: lohmann99 issued server command: /gamemode survival
+[22:24:24] [Server thread/INFO]: [lohmann99: Set own game mode to Survival Mode]
+[22:24:38] [Server thread/INFO]: lohmann99 issued server command: /spawnpoint
+[22:24:38] [Server thread/INFO]: [lohmann99: Set spawn point to -69, 1, 22 [0.0] in minecraft:overworld for lohmann99]
+[22:24:51] [Server thread/INFO]: lohmann99 issued server command: /setworldspawn
+[22:24:51] [Server thread/INFO]: [lohmann99: Set the world spawn point to -69, 1, 22 [0.0]]
+[22:25:44] [Server thread/INFO]: lohmann99 issued server command: /skript reload all
+[22:25:51] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 7135ms or 142 ticks behind
+[22:26:19] [Server thread/INFO]: lohmann99 lost connection: Disconnected
+[22:26:19] [Server thread/INFO]: lohmann99 left the game
+[22:26:31] [Server thread/INFO]: Stopping the server
+[22:26:31] [Server thread/INFO]: Stopping server
+[22:26:31] [Server thread/INFO]: [Skellett] Disabling Skellett v1.9.9
+[22:26:31] [Server thread/INFO]: [Skript] Disabling Skript v2.5
+[22:26:31] [Server thread/INFO]: [WorldGuard] Disabling WorldGuard v7.0.4+f7ff984
+[22:26:31] [Server thread/INFO]: [WorldGuard] Shutting down executor and cancelling any pending tasks...
+[22:26:31] [Server thread/INFO]: [WorldEdit] Disabling WorldEdit v7.2.0-beta-05+e575ffe
+[22:26:31] [Server thread/INFO]: Unregistering com.sk89q.worldedit.bukkit.BukkitServerInterface from WorldEdit
+[22:26:31] [Server thread/INFO]: Saving players
+[22:26:31] [Server thread/INFO]: Saving worlds
+[22:26:31] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Fonixcraft]'/minecraft:overworld
+[22:26:33] [Server thread/INFO]: ThreadedAnvilChunkStorage (Fonixcraft): All chunks are saved
+[22:26:33] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Fonixcraft_nether]'/minecraft:the_nether
+[22:26:33] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[22:26:33] [Server thread/INFO]: Saving chunks for level 'ServerLevel[Fonixcraft_the_end]'/minecraft:the_end
+[22:26:34] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[22:26:34] [Server thread/INFO]: ThreadedAnvilChunkStorage (Fonixcraft): All chunks are saved
+[22:26:35] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[22:26:35] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[22:26:35] [Server thread/INFO]: Flushing Chunk IO
+[22:26:35] [Server thread/INFO]: Closing Thread Pool
+[22:26:35] [Server thread/INFO]: Closing Server
