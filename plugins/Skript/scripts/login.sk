@@ -1,6 +1,12 @@
 #
 # A Login script that allows multiple accounts to share a progress and regions in worldguard.
 
+on join:
+	if {%player%.logged_in} is true:
+		make player execute command "/logout"
+	if player is not op:
+		set the walk speed of the player to 0
+
 command /login <text> <text>:
 	#Logs a user in and allows him access to his owned plots
 	trigger:
@@ -29,7 +35,6 @@ command /login <text> <text>:
 				
 				# Giv brugeren sine items
 				loop all blocks in radius 2 around player:
-					message "%loop-block%"
 					if loop-block is chest:
 						loop all items in loop-block's inventory:
 							add loop-item to player's inventory
@@ -37,6 +42,7 @@ command /login <text> <text>:
 				send "Dine ting er hentet"
 				
 				# Giv brugeren sine levels
+				set player's level to {%{%player%.logged_in_as}%.xp}
 				
 				# Giv brugeren adgang til sine WorlGuard regioner
 				loop {%{%player%.logged_in_as}%.owned_regions::*}:
@@ -49,7 +55,7 @@ command /login <text> <text>:
 					message "Du har ikke angivet Town Center Location. Gør venligst dette."
 				
 				# Stop frys
-				
+				set the walk speed of the player to 0.2
 				
 				
 				send "Du er nu logget ind som: %{%player%.logged_in_as}%"
@@ -71,7 +77,6 @@ command /logout:
 			# Frys brugeren
 			# Gem brugerens items
 			loop all blocks in radius 2 around player:
-				message "%loop-block%"
 				if loop-block is chest:
 					loop all items in player's inventory:
 						if loop-block have enough space for 1 of stone:
@@ -80,6 +85,8 @@ command /logout:
 			message "Dine ting er gemt"
 							
 			# Gem brugerens experience
+			set {%{%player%.logged_in_as}%.xp} to player's level
+			set player's level to 0
 			
 			# Fratag brugeren adgang til sine WorlGuard regioner
 			loop {%{%player%.logged_in_as}%.owned_regions::*}:

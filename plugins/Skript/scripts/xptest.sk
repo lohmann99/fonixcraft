@@ -1,9 +1,0 @@
-
-command /xptest:
-	trigger:
-		set {level_test} to player's level
-		set player's level to 0
-		
-command /xptest2:
-	trigger:
-		set player's level to {level_test}
