@@ -37,3 +37,10 @@ command /region_remove <text>:
 			send "Listen indeholder nu: %{wg_regions::*}%"
 		else:
 			send "Regionen %arg-1% blev ikke funde på region listen"
+			
+command /region_set_town_center:
+	permission: skript.region
+	permission message: "Du har ikke adgang til denne command"
+	trigger:
+		set {town_center} to player's location
+		message "Town Center sat. Spillere spawner nu her: %{town_center}%"

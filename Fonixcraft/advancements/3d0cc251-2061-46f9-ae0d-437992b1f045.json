@@ -1,31 +1,7 @@
 {
-  "minecraft:recipes/transportation/acacia_boat": {
+  "minecraft:recipes/building_blocks/acacia_slab": {
     "criteria": {
-      "in_water": "2020-10-18 16:39:50 +0200"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/charcoal": {
-    "criteria": {
-      "has_log": "2020-10-22 21:58:31 +0200"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/oak_boat": {
-    "criteria": {
-      "in_water": "2020-10-18 16:39:50 +0200"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/stripped_acacia_wood": {
-    "criteria": {
-      "has_log": "2020-10-22 21:58:34 +0200"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/acacia_wood": {
-    "criteria": {
-      "has_log": "2020-10-22 21:58:31 +0200"
+      "has_planks": "2020-10-23 11:15:17 +0200"
     },
     "done": true
   },
@@ -41,21 +17,33 @@
     },
     "done": true
   },
-  "minecraft:recipes/transportation/birch_boat": {
+  "minecraft:recipes/decorations/acacia_fence": {
     "criteria": {
-      "in_water": "2020-10-18 16:39:50 +0200"
+      "has_planks": "2020-10-23 11:15:17 +0200"
     },
     "done": true
   },
-  "minecraft:recipes/transportation/jungle_boat": {
+  "minecraft:recipes/redstone/acacia_button": {
     "criteria": {
-      "in_water": "2020-10-18 16:39:50 +0200"
+      "has_planks": "2020-10-23 11:15:17 +0200"
     },
     "done": true
   },
-  "minecraft:recipes/transportation/spruce_boat": {
+  "minecraft:recipes/decorations/acacia_sign": {
     "criteria": {
-      "in_water": "2020-10-18 16:39:50 +0200"
+      "has_acacia_planks": "2020-10-23 11:15:17 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/acacia_pressure_plate": {
+    "criteria": {
+      "has_planks": "2020-10-23 11:15:17 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/acacia_trapdoor": {
+    "criteria": {
+      "has_planks": "2020-10-23 11:15:17 +0200"
     },
     "done": true
   },
@@ -74,6 +62,102 @@
       "minecraft:plains": "2020-10-22 22:20:04 +0200"
     },
     "done": false
+  },
+  "minecraft:recipes/misc/charcoal": {
+    "criteria": {
+      "has_log": "2020-10-22 21:58:31 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "has_planks": "2020-10-23 11:15:17 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stripped_acacia_wood": {
+    "criteria": {
+      "has_log": "2020-10-22 21:58:34 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "in_water": "2020-10-18 16:39:50 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2020-10-23 11:31:52 +0200"
+    },
+    "done": true
+  },
+  "minecraft:story/shiny_gear": {
+    "criteria": {
+      "diamond_helmet": "2020-10-23 11:30:57 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/barrel": {
+    "criteria": {
+      "has_planks": "2020-10-23 11:15:17 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "in_water": "2020-10-18 16:39:50 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/acacia_stairs": {
+    "criteria": {
+      "has_planks": "2020-10-23 11:15:17 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2020-10-18 16:39:50 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/acacia_door": {
+    "criteria": {
+      "has_planks": "2020-10-23 11:15:17 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/acacia_wood": {
+    "criteria": {
+      "has_log": "2020-10-22 21:58:31 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/stick": {
+    "criteria": {
+      "has_planks": "2020-10-23 11:15:17 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/acacia_fence_gate": {
+    "criteria": {
+      "has_planks": "2020-10-23 11:15:17 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "in_water": "2020-10-18 16:39:50 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "in_water": "2020-10-18 16:39:50 +0200"
+    },
+    "done": true
   },
   "DataVersion": 2580
 }

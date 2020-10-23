@@ -32,6 +32,6 @@ command /user_set_saferoom <text>:
 	permission message: "Du har ikke adgang til denne command"
 	trigger:
 		if {users::*} contains arg-1:
-			set {arg-1.saferoom_location} to player's location
+			set {%arg-1%.saferoom_location} to player's location
 		else:
 			message "Brugeren blev ikke fundet i bruger listen"

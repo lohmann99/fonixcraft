@@ -29,11 +29,12 @@ command /login <text> <text>:
 				
 				# Giv brugeren sine items
 				loop all blocks in radius 2 around player:
+					message "%loop-block%"
 					if loop-block is chest:
 						loop all items in loop-block's inventory:
 							add loop-item to player's inventory
 							remove loop-item from loop-block's inventory
-				send "Retrived items from chest"
+				send "Dine ting er hentet"
 				
 				# Giv brugeren sine levels
 				
@@ -70,11 +71,13 @@ command /logout:
 			# Frys brugeren
 			# Gem brugerens items
 			loop all blocks in radius 2 around player:
+				message "%loop-block%"
 				if loop-block is chest:
 					loop all items in player's inventory:
 						if loop-block have enough space for 1 of stone:
 							add loop-item to loop-block's inventory
 							remove loop-item from player's inventory
+			message "Dine ting er gemt"
 							
 			# Gem brugerens experience
 			
@@ -86,7 +89,8 @@ command /logout:
 			set {%player%.logged_in} to false
 			set {%player%.logged_in_as} to ""
 			
-			# Teleport brugeren til lobby 
+			# Teleport brugeren til lobby
+			teleport player to spawn point of "Fonixcraft"
 			send "Du er nu logget ud."
 		
 		else:
