@@ -44,3 +44,9 @@ command /region_set_town_center:
 	trigger:
 		set {town_center} to player's location
 		message "Town Center sat. Spillere spawner nu her: %{town_center}%"
+		
+command /region_list:
+	permission: skript.region
+	permission message: "Du har ikke adgang til denne command"
+	trigger:
+		message "Region Listen: %{wg_regions::*}%"

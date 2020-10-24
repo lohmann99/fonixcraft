@@ -35,3 +35,9 @@ command /user_set_saferoom <text>:
 			set {%arg-1%.saferoom_location} to player's location
 		else:
 			message "Brugeren blev ikke fundet i bruger listen"
+			
+command /user_list:
+	permission: skript.user
+	permission message: "Du har ikke adgang til denne command"
+	trigger:
+		message "Bruger Listen: %{users::*}%"

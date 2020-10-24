@@ -75,6 +75,9 @@ command /logout:
 			teleport player to {%{%player%.logged_in_as}%.saferoom_location}
 			
 			# Frys brugeren
+			if player is not op:
+				set the walk speed of the player to 0
+			
 			# Gem brugerens items
 			loop all blocks in radius 2 around player:
 				if loop-block is chest:
