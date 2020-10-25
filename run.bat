@@ -1,3 +1,3 @@
 
-java -Xms3G -Xmx3G -jar paper-206.jar nogui
+java -Xms3G -Xmx3G -jar server.jar nogui
 pause
