@@ -78,13 +78,13 @@ ignition:
     block-tnt-block-damage: false
     block-lighter: false
 fire:
-    disable-lava-fire-spread: false
-    disable-all-fire-spread: false
+    disable-lava-fire-spread: true
+    disable-all-fire-spread: true
     disable-fire-spread-blocks: []
     lava-spread-blocks: []
 mobs:
     block-creeper-explosions: false
-    block-creeper-block-damage: false
+    block-creeper-block-damage: true
     block-wither-explosions: false
     block-wither-block-damage: false
     block-wither-skull-explosions: false
@@ -95,7 +95,7 @@ mobs:
     block-fireball-block-damage: false
     anti-wolf-dumbness: false
     allow-tamed-spawns: true
-    disable-enderman-griefing: false
+    disable-enderman-griefing: true
     disable-snowman-trails: false
     block-painting-destroy: false
     block-item-frame-destroy: false
