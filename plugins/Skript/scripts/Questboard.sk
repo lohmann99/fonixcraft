@@ -1,0 +1,4 @@
+
+on right click on sign:
+		cancel event
+		message "Det her er et skilt"
