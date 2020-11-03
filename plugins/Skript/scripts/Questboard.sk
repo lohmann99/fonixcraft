@@ -3,13 +3,15 @@ on rightclick on sign:
 	message "%clicked block%"
 	1st line of clicked block is "[QUEST]":
 		message "Dette er et Quest skilt"
+		message "Hvis du afleverer %2nd line of clicked block% kan du få %3rd line of clicked block%"
 
 
 on rightclick:
-	if clicked block is not air:
+	if clicked block is planks:
 		set {location.test} to clicked block's position
 		message "%{location.test}%"
 		set block 1 south of {location.test} to  south facing oak wall sign
 		set {_sign} to block 1 south of {location.test}
-		set 1st line of {_sign} to "This is line 1"
-		set 2nd line of {_sign} to "This is line 2"
+		set 1st line of {_sign} to "§f[QUEST]"
+		set 2nd line of {_sign} to "64 Cobblestone"
+		set 3rd line of {_sign} to "10 points"
