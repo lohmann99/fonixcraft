@@ -1,4 +1,15 @@
 
-on right click on sign:
-		cancel event
-		message "Det her er et skilt"
+on rightclick on sign:
+	message "%clicked block%"
+	1st line of clicked block is "[QUEST]":
+		message "Dette er et Quest skilt"
+
+
+on rightclick:
+	if clicked block is not air:
+		set {location.test} to clicked block's position
+		message "%{location.test}%"
+		set block 1 south of {location.test} to  south facing oak wall sign
+		set {_sign} to block 1 south of {location.test}
+		set 1st line of {_sign} to "This is line 1"
+		set 2nd line of {_sign} to "This is line 2"
