@@ -1,4 +1,7 @@
-
+on load:
+	set {quest::easy::*} to "64 Cobblestone, 32 Andesite, 32 Granite, 32 Diorite, 64 Dirt, 32 Gravel"
+	set {quest::point::*} to "10, 25, 50"
+	
 on rightclick on sign:
 	
 	# Tjek om spilleren er logget ind
@@ -33,11 +36,30 @@ on rightclick:
 			
 command /questboard_reset:
 	trigger:
+		# Load in quests
+		set {_quest::*} to {quest::easy::1} split at ", "
+		
+		# Load in points
+		set {_points::*} to {quest::point::1} split at ", "
+		
+		# Loop locations to add sign. TODO: Make locations permanent, now using marker.
 		loop {marker::*}:
+			# Find random quest item
+			set {_random} to random element of {_quest::*}
+			
+			# Create sign at location facing south
 			set block 1 south of block at location at loop-value to south facing oak wall sign
+			
+			# Save sign for modification
 			set {_sign} to block 1 south of block at location at loop-value
 			
+			# Format sign to quest sign
 			set 1st line of {_sign} to "§e[QUEST]"
+			set 2nd line of {_sign} to "%{_random}%"
+			
+			
+			# Remove the random element from the list, so we dont pick it again
+			remove {_random} from {_quest::*}
 		
 			
 command /marker:
