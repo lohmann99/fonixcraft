@@ -40,7 +40,7 @@ command /questboard_reset:
 		set {_quest::*} to {quest::easy::1} split at ", "
 		
 		# Load in points
-		set {_points::*} to {quest::point::1} split at ", "
+		set {_point::*} to {quest::point::1} split at ", "
 		
 		# Loop locations to add sign. TODO: Make locations permanent, now using marker.
 		loop {marker::*}:
@@ -56,22 +56,10 @@ command /questboard_reset:
 			# Format sign to quest sign
 			set 1st line of {_sign} to "§e[QUEST]"
 			set 2nd line of {_sign} to "%{_random}%"
+			set 3rd line of {_sign} to "%{_point::*}%"
 			
 			
 			# Remove the random element from the list, so we dont pick it again
 			remove {_random} from {_quest::*}
 		
 			
-command /marker:
-	trigger:
-		if {marker} is true:
-			set {marker} to false
-			message "Marker set to false"
-		else:
-			set {marker} to true
-			message "Marker set to true"
-			
-command /marker_clear:
-	trigger:
-		clear {marker::*}
-		message "Marker has been cleared of all selections"

@@ -1,0 +1,27 @@
+
+# Marker will save a right clicked blocks position
+on rightclick:
+	if {marker} is true:
+		set {_new_pos} to location of clicked block
+		add {_new_pos} to {marker::*}
+
+		message "Marker added: (%{_new_pos}%)"
+		message "Current Markers:"
+		loop {marker::*}:
+			message "(%loop-value%)"
+
+# Toggle Marker on or off			
+command /marker:
+	trigger:
+		if {marker} is true:
+			set {marker} to false
+			message "Marker is now off"
+		else:
+			set {marker} to true
+			message "Marker is now on"
+			
+# Clear the Marker list
+command /marker_clear:
+	trigger:
+		clear {marker::*}
+		message "Marker has been cleared of all selections"
