@@ -56,10 +56,12 @@ command /questboard_reset:
 			# Format sign to quest sign
 			set 1st line of {_sign} to "§e[QUEST]"
 			set 2nd line of {_sign} to "%{_random}%"
-			set 3rd line of {_sign} to "%{_point::*}%"
+			set 3rd line of {_sign} to "%{_point::1}%"
 			
 			
 			# Remove the random element from the list, so we dont pick it again
 			remove {_random} from {_quest::*}
-		
+			broadcast "%{_random}% < random"
+			broadcast "%{_quest::*}% < list"
+			
 			

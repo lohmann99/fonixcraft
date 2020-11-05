@@ -1,0 +1,12 @@
+on load:
+	add 15 and 16 to {_list::*}
+	add "hej" to {_list::*}
+	add "velkommen" to {_list::*}
+	broadcast "%{_list::*}%"
+	
+	loop 4 times:
+		set {_random} to random element of {_list::*}
+		broadcast "random = %{_random}%"
+		remove {_random} from {_list::*}
+		
+	broadcast "%{_list::*}%"

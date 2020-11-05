@@ -6,9 +6,9 @@ on rightclick:
 		add {_new_pos} to {marker::*}
 
 		message "Marker added: (%{_new_pos}%)"
-		message "Current Markers:"
+		broadcast "Current Markers:"
 		loop {marker::*}:
-			message "(%loop-value%)"
+			broadcast "(%loop-value%)"
 
 # Toggle Marker on or off			
 command /marker:
