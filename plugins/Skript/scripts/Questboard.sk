@@ -1,5 +1,7 @@
 on load:
-	set {quest::easy::*} to "64 Cobblestone, 32 Andesite, 32 Granite, 32 Diorite, 64 Dirt, 32 Gravel"
+	set {quest::easy::*} to "64 Cobblestone, 32 Andesite, 32 Granite, 32 Diorite, 64 Dirt, 32 Gravel, 4 Cooked Beef, 16 Brown Mushroom, 16 Red Mushroom"
+	set {quest::medium::*} to "16 Coal, 8 Iron Ingot, 8 Gold Ingot, 16 Redstone, 64 Stone, 16 Cooked Beef, 32 Clay, 16 Raw Salmon, 16 Raw Cod"
+	set {quest::hard::*} to "16 Nether Quartz, 4 Bookshelf, 1 Diamond, 16 Emerald, 32 Brick, 16 Repeater, 8 Comparator"
 	set {quest::point::*} to "10, 25, 50"
 	
 on rightclick on sign:
@@ -10,7 +12,7 @@ on rightclick on sign:
 		# Check om skiltet er en quest
 		1st line of clicked block is "§e[QUEST]":
 			set {_items::*} to 2nd line of block parsed as "%item%"
-			set {_points::*} to 3rd line of block parsed as "%number% point"
+			set {_points::*} to 4th line of block parsed as "%number% point"
 			
 			if player's inventory contains {_items::*}:
 				remove {_items::*} from player's inventory
@@ -24,31 +26,41 @@ on rightclick on sign:
 		message "Du er ikke logget in. Brug /login <navn> <kode> til at logge ind."
 
 
-on rightclick:
-	if {marker} is true:
-		set {_new_pos} to location of clicked block
-		add {_new_pos} to {marker::*}
 
-		message "Marker added: (%{_new_pos}%)"
-		message "Current Markers:"
-		loop {marker::*}:
-			message "(%loop-value%)"
 			
 command /questboard_reset:
 	trigger:
 		# Load in quests
-		set {_quest::*} to {quest::easy::1} split at ", "
+		set {_quest::easy::*} to {quest::easy::1} split at ", "
+		set {_quest::medium::*} to {quest::medium::1} split at ", "
+		set {_quest::hard::*} to {quest::hard::1} split at ", "
 		
 		# Load in points
 		set {_point::*} to {quest::point::1} split at ", "
 		
 		# Loop locations to add sign. TODO: Make locations permanent, now using marker.
 		loop {marker::*}:
+			set {_index::*} to loop-index parsed as "%number%"
+			
 			# Find random quest item
-			set {_random} to random element of {_quest::*}
+			if {_index::1} is less than 5:
+				set {_random} to random element of {_quest::easy::*}
+				set {_point} to {_point::1}
+				remove {_random} from {_quest::easy::*}
+				
+			else if {_index::1} is more than 8:
+				set {_random} to random element of {_quest::hard::*}
+				set {_point} to {_point::3}
+				remove {_random} from {_quest::hard::*}
+			else:
+				set {_random} to random element of {_quest::medium::*}
+				set {_point} to {_point::2}
+				remove {_random} from {_quest::medium::*}
+
+			
 			
 			# Create sign at location facing south
-			set block 1 south of block at location at loop-value to south facing oak wall sign
+			set block 1 south of block at location at loop-value to south facing birch wall sign
 			
 			# Save sign for modification
 			set {_sign} to block 1 south of block at location at loop-value
@@ -56,12 +68,10 @@ command /questboard_reset:
 			# Format sign to quest sign
 			set 1st line of {_sign} to "§e[QUEST]"
 			set 2nd line of {_sign} to "%{_random}%"
-			set 3rd line of {_sign} to "%{_point::1}%"
+			set 4th line of {_sign} to "%{_point}% point"
 			
 			
-			# Remove the random element from the list, so we dont pick it again
-			remove {_random} from {_quest::*}
-			broadcast "%{_random}% < random"
-			broadcast "%{_quest::*}% < list"
+			
+			
 			
 			

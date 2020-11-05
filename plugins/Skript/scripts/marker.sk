@@ -6,9 +6,9 @@ on rightclick:
 		add {_new_pos} to {marker::*}
 
 		message "Marker added: (%{_new_pos}%)"
-		broadcast "Current Markers:"
+		message "Current Markers:"
 		loop {marker::*}:
-			broadcast "(%loop-value%)"
+			message "(%loop-value%)"
 
 # Toggle Marker on or off			
 command /marker:
@@ -16,6 +16,8 @@ command /marker:
 		if {marker} is true:
 			set {marker} to false
 			message "Marker is now off"
+			console command "marker_clear"
+			message "Marker has been cleared of all selections"
 		else:
 			set {marker} to true
 			message "Marker is now on"
